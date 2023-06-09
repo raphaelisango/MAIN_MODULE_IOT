@@ -1,0 +1,30 @@
+{
+  "name": "main_module_iot",
+  "version": "1.0.0",
+  "description": "PUBSUB , CLIENTSERVER, REDIS Only",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "execa": "^7.1.1",
+    "express": "^4.17.1",
+    "ws": "^8.13.0",
+    "simple-xmpp": "^2.3.1",
+    "dotenv": "^16.0.3",
+    "amqplib": "^0.10.3",
+    "mosca": "^2.8.3",
+    "mqtt": "^3.0.0",
+    "redis": "^4.6.5"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelisango/MAIN_MODULE_IOT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaelisango/MAIN_MODULE_IOT/issues"
+  },
+  "homepage": "https://github.com/raphaelisango/MAIN_MODULE_IOT#readme"
+}
