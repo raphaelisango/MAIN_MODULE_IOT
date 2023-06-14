@@ -1,9 +1,0 @@
-[submodule "client_server_iot"]
-	path = client_server_iot
-	url = https://github.com/raphaelisango/client_server_iot.git
-[submodule "pub_sub_iot"]
-	path = pub_sub_iot
-	url = https://github.com/raphaelisango/pub_sub_iot.git
-[submodule "redis-pub-sub-server"]
-	path = redis-pub-sub-server
-	url = https://github.com/raphaelisango/redis-pub-sub-server.git

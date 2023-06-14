@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "PUBSUB , CLIENTSERVER, REDIS Only",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
