@@ -63,6 +63,7 @@ import { createClient } from "redis"; //REDIS
 })();
 //WEBSOCKET SERVER
 (() => {
+return;
   //const wss = new WebSocketServer({ server });
   const WS = ClientServer.createClientServer("websocket");
   const Server = WS("server");
@@ -76,6 +77,7 @@ import { createClient } from "redis"; //REDIS
 })();
 //REDIS PUB ...............................................................................
 (async () => {
+return;
   let data = {
     destination: "raphael", //to subscribe to
     source: "percymiler", // to publish to
@@ -89,7 +91,8 @@ import { createClient } from "redis"; //REDIS
 })();
 
 //XMPP CLIENT A ..............................................................................
-(() => {
+(async () => {
+
   const xmpp = Require("simple-xmpp");
   const Xmpp = ClientServer.createClientServer("xmpp");
 
@@ -101,10 +104,19 @@ import { createClient } from "redis"; //REDIS
     extradata: {},
   };
 
-  const server = Xmpp(xmpp, execa, 5222, "localhost");
+  const server =await Xmpp(xmpp, execa, 5222, "localhost");
   server.User("register", {
     name: "percy",
     host: "localhost",
     password: "12345",
   });
+  
+  server.On('chat', function(from, message) {
+	console.log('%s says %s', from, message);
+  });
+  
+  server.On('online', function(data) {
+	console.log('Yes, I\'m online');
+  });
+  
 })();

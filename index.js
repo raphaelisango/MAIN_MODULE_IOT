@@ -46,6 +46,7 @@ const amqp = Require("amqplib/callback_api");
 
 //WEBSOCKET CLIENT
 (() => {
+return;
   const source = "percymiler";
   const url = `ws://localhost:3030?connectionKey=${source}`;
 
@@ -69,6 +70,7 @@ const amqp = Require("amqplib/callback_api");
 //REDIS SUB......................................................................
 
 (async () => {
+return;
   const sub = REDIS_PUBSUB("sub", createClient);
   await sub.connect();
   const listener = (message, channel) =>
@@ -79,6 +81,7 @@ const amqp = Require("amqplib/callback_api");
 
 //XMPP CLIENT A ..............................................................................
 (() => {
+
   const xmpp = Require("simple-xmpp");
   const Xmpp = ClientServer.createClientServer("xmpp");
 
@@ -105,4 +108,14 @@ const amqp = Require("amqplib/callback_api");
     host: "localhost",
     port: 5222,
   });
+  
+  
+    server.On('chat', function(from, message) {
+	console.log('%s says %s', from, message);
+  });
+  
+  server.On('online', function(data) {
+	console.log('Yes, I\'m online');
+  });
+  
 })();
